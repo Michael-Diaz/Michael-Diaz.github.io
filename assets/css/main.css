@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
 
 	strong, b {
 		font-weight: 300;
-		color: #666;
+		color: #fac35e;
 	}
 
 	em, i {
@@ -1794,6 +1794,69 @@ h1, h2, h3, h4, h5, h6 {
 				width: auto;
 			}
 
+/* Modal */
+
+	.modalDialog {
+		position: fixed;
+		font-family: 'Source Sans Pro', sans-serif;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.8);
+		z-index: 99999;
+		opacity: 0;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		pointer-events: none;
+	}
+
+	.modalDialog:target {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+		.modalDialog > div {
+			width: 75%;
+			height: 65%;
+			position: relative;
+			margin: 10% auto;
+			
+			background: #fff;
+		}
+
+	.close {
+		background: #2C3B62;
+		color: #FFFFFF;
+		line-height: 26px;
+		position: absolute;
+		right: 30px;
+		text-align: center;
+		top: 30px;
+		width: 100px;
+		height: 26px;
+		text-decoration: none;
+		font-style: italic;
+		font-weight: bold;
+		-webkit-border-radius: 13px;
+		-moz-border-radius: 13px;
+		border-radius: 13px;
+		-moz-box-shadow: 1px 1px 3px #000;
+		-webkit-box-shadow: 1px 1px 3px #000;
+		box-shadow: 1px 1px 3px #000;
+	}
+
+	.close:hover {
+		background: #2D4C81;
+		color: #FFF;
+	}
+
+	.close:active {
+		background: #FAC35E;
+		color: #000;
+	}
+
 /* List */
 
 	ul {
@@ -1930,7 +1993,7 @@ h1, h2, h3, h4, h5, h6 {
 		}
 
 		table thead {
-			background: #2a3347;
+			background: #2C3B62;
 			color: #fff;
 		}
 
@@ -1994,9 +2057,32 @@ button,
 			font-size: 0.8em;
 		}
 
+		.item > div header {
+			background: #2C3B62;
+		}
+
 			.item header h3 {
 				font-size: 1em;
 			}
+
+		.item strong
+		{
+			font-style: italic;
+			font-weight: 600;
+		}
+
+		.item iframe {
+			width: 50%;
+			height: 75%;
+			margin-top: 1em;
+		}
+
+		.item p {
+			margin-top: 1em;
+			margin-bottom: 1em;
+			margin-left: 2em;
+			margin-right: 2em;
+		}
 
 /* Icons */
 
@@ -2049,7 +2135,7 @@ button,
 	-webkit-justify-content: space-between;
 	-ms-justify-content: space-between;
 	justify-content: space-between;
-	background: #2a3347 url("images/overlay.png");
+	background: #2C3B62 url("images/overlay.png");
 	box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.1);
 	color: #fff;
 	height: 100%;
@@ -2159,7 +2245,7 @@ button,
 					#nav ul li a span:before {
 						position: absolute;
 						left: 0;
-						color: #2A3347;
+						color: #2C3B62;
 						text-align: center;
 						width: 1.25em;
 						line-height: 1.75em;
